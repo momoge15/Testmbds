@@ -4,21 +4,18 @@
  * and open the template in the editor.
  */
 package MBDSCI;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Wili
+ * @author PC OMEN
  */
-@WebServlet(name = "ServletServlet", urlPatterns = {"/experiment"})
-public class ServletServlet extends HttpServlet {
+public class ExperimentServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +34,26 @@ public class ServletServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletServlet</title>");            
+            out.println("<title>Servlet ExperimentServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServletServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1><CENTER><b>Ma première servlet </b></CENTER></h1>");
+            out.println("<h3><b>Informations concernant l'adresse IP et le navigateur utilisé par le client:</b> </h3>");
+            out.println("<p>Adresse IP du client:" +request.getRemoteAddr()+" </p>");
+            out.println("<p>Navigateur du client: "+request.getLocalAddr()+" </p>");
+            out.println("<h3><b>Informations concernant la requete du client:</b> </h3>");
+            out.println("<p>Methode:" +request.getMethod()+" </p>");
+            out.println("<p>Protocole:" +request.getProtocol()+" </p>");
+            out.println("<p>Uri demandée:" +request.getRequestURI()+" </p>");
+            out.println("<h3><b>Informations concernant l'entete de la requete:</b> </h3>");
+            out.println("<p>Host: "+request.getServerName()+" : "+request.getServerPort()+" </p>");
+            out.println("<p>User-agent: "+request.getCharacterEncoding()+" </p>");
+            out.println("<p>Accept: </p>");
+            out.println("<p>Accept-language: "+request.getLocale()+"</p>");
+            out.println("<p>Accept-encoding: </p>");
+            out.println("<p>Accept-charset:"+request.getHeader("user-agent")+" </p>");
+            out.println("<p>Keep-alive: </p>");
+            out.println("<p>Connection: </p>");
             out.println("</body>");
             out.println("</html>");
         }
