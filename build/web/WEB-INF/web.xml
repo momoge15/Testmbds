@@ -4,9 +4,17 @@
         <servlet-name>ExperimentServlet</servlet-name>
         <servlet-class>MBDSCI.ExperimentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EtudiantsServlet</servlet-name>
+        <servlet-class>MBDSCI.EtudiantsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ExperimentServlet</servlet-name>
         <url-pattern>/Experiment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EtudiantsServlet</servlet-name>
+        <url-pattern>/etudiants</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
